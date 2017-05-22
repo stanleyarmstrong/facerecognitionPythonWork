@@ -2,7 +2,7 @@ import sys
 def newMemeber():
 	print('Welcome to the National Meme Bank of United States, would you like to join? Y/N')
 	user = raw_input().lower()
-	if(user == 'y')
+	if(user is 'y')
 		user = 'n'
 		print('What will your account name be?')
 		account = raw_input()
@@ -18,4 +18,4 @@ def newMemeber():
 		print('Your account is fully set up!')
 	else
 		return 'Thanks for your time!'
-newMemeber()		
+newMemeber()
