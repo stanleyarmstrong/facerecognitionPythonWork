@@ -16,6 +16,6 @@ def newMemeber():
 			print('Just to clarify your password is ' + password + ' Y/N')
 			user = raw_input().lower()
 		print('Your account is fully set up!')
-	else
+	else:
 		return 'Thanks for your time!'
 newMemeber()
