@@ -9,7 +9,7 @@ def newMemeber():
 			while(user == 'n'):
 				account = input('What would your new account name be?')
 				break
-		user = 'n'
+		user = 'n' 
 		password = input('Awesome, you will be getting a new T-shirt in the mail, but before that happens what would you like your password to be?')
 		while(user != 'y'):
 			user = input('Just to clarify your password is ' + password + ' Y/N').lower()
@@ -21,3 +21,4 @@ def newMemeber():
 	else:
 		return 'Thanks for your time!'
 newMemeber()
+print(account + " " + password)
