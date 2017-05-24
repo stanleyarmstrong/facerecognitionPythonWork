@@ -1,6 +1,9 @@
 import sys
+import sqlite3
+connection = sqlite3.connect('memeBase.db')
+
 def newMemeber():
-	user = input('Welcome to the National Meme Bank of United States, would you like to join? Y/N').lower()
+	user = input('Welcome to the National Meme Bank of the United States, would you like to join? Y/N').lower()
 	if(user == 'y'):
 		user = 'n'
 		account =input('What will your account name be?')
@@ -20,5 +23,5 @@ def newMemeber():
 		return account + ' ' + password
 	else:
 		return 'Thanks for your time!'
-newMemeber()
-print(account + " " + password)
+
+
