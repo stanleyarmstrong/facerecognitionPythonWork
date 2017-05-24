@@ -8,7 +8,7 @@ def newMemeber():
 		account = raw_input()
 		while(user != 'y'):
 			print('Just to make sure, your account name is ' + account + ' Y/N')
-			user =raw_input().lower()
+			user = raw_input().lower() 
 		user = 'n'
 		print('Awesome, you will be getting a new T-shirt in the mail, but before that happens what would you like your password to be?')
 		password = raw_input()
@@ -18,4 +18,4 @@ def newMemeber():
 		print('Your account is fully set up!')
 	else:
 		return 'Thanks for your time!'
-newMemeber()
+print(newMemeber())
