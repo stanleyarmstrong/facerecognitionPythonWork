@@ -17,5 +17,7 @@ def newMemeber():
 			while(user == 'n'):
 				password = input('What would you like your password to be?')	
 		print('Your account is fully set up!')
+		return account + ' ' + password
 	else:
 		return 'Thanks for your time!'
+newMemeber()
