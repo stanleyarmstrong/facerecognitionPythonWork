@@ -8,14 +8,14 @@ def newMemeber():
 			user = input('Just to make sure, your account name is ' + account + ' Y/N').lower()
 			while(user == 'n'):
 				account = input('What would your new account name be?')
+				break
 		user = 'n'
-		print('Awesome, you will be getting a new T-shirt in the mail, but before that happens what would you like your password to be?')
-		password = input()
+		password = input('Awesome, you will be getting a new T-shirt in the mail, but before that happens what would you like your password to be?')
 		while(user != 'y'):
-			print('Just to clarify your password is ' + password + ' Y/N')
-			user = input().lower()
+			user = input('Just to clarify your password is ' + password + ' Y/N').lower()
 			while(user == 'n'):
-				password = input('What would you like your password to be?')	
+				password = input('What would you like your password to be?')
+				break
 		print('Your account is fully set up!')
 		return account + ' ' + password
 	else:
