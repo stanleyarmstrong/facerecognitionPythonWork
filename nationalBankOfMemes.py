@@ -1,7 +1,7 @@
 import sys
 def newMemeber():
 	user = input('Welcome to the National Meme Bank of United States, would you like to join? Y/N').lower()
-	if(user is 'y'):
+	if(user == 'y'):
 		user = 'n'
 		account =input('What will your account name be?')
 		while(user != 'y'):
