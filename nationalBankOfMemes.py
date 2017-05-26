@@ -7,8 +7,8 @@ def newMemeber():
 	user = input().lower()
 	if(user == 'y'):
 		user = 'n'
-		print(('What will your account name be?'
-		account =input()
+		print('What will your account name be?'
+		account = input()
 		while(user != 'y'):
 			print('Just to make sure, your account name is ' + account + ' Y/N')
 			user = input().lower()
