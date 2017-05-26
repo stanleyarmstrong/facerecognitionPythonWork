@@ -30,7 +30,7 @@ def newMemeber():
 		return account + ' ' + password
 	else:
 		return 'Thanks for your time!'
-
+print(newMemeber())
 def deposit():
 	print('How memes would you like to deposit today?')
 	user = input()
