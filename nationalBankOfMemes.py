@@ -1,5 +1,8 @@
-import sys
+import tkinter as tk
+from tkinter import filedialog
+
 import sqlite3
+
 connection = sqlite3.connect('memeBase.db')
 
 def newMemeber():
@@ -30,8 +33,13 @@ def newMemeber():
 		return account + ' ' + password
 	else:
 		return 'Thanks for your time!'
-print(newMemeber())
 def deposit():
-	print('How memes would you like to deposit today?')
+	print('How many memes would you like to deposit today?')
 	user = input()
+	print('Ok, sounds good. Please choose the meme files you would like to store.')
+	
+	
+	
+	
+	
 	
