@@ -36,13 +36,18 @@ def newMemeber():
 def deposit():
 	print('How many memes would you like to deposit today?')
 	user = input()
-	print('Ok, sounds good. Please choose the meme files names you would like to store.')
+	print('Ok, sounds good. Please choose the meme files name you would like to store.')
 	filesToStore = input()
-	print('It looks like they are stored in the bank now. Have a good day!')
+	print('It looks like '+ filesToStore+' are stored in the bank now. Have a good day!')
 	return filesToStore
-print(deposit())
-	
-	
-	
-	
-	
+def withdrawal():
+	print('How many memes would you like to withdraw today?'
+	user = input()
+	print('Ok, sounds good! Please choose the meme file names you would like to store.')
+	user = 'n'
+	while(user == 'n'):
+		filesToGetRidOf = input()
+		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
+		user = input()
+	print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
+print(withdrawal())
