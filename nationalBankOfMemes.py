@@ -41,7 +41,7 @@ def deposit():
 	print('It looks like '+ filesToStore+' are stored in the bank now. Have a good day!')
 	return filesToStore
 def withdrawal():
-	print('How many memes would you like to withdraw today?'
+	print('How many memes would you like to withdraw today?')
 	user = input()
 	print('Ok, sounds good! Please choose the meme file names you would like to store.')
 	user = 'n'
