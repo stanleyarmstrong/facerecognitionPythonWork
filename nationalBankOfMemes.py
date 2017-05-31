@@ -45,7 +45,7 @@ def withdrawal():
 	user = input()
 	print('Ok, sounds good! Please choose the meme file names you would like to store.')
 	user = 'n'
-	filesToGetRidOf = null
+	filesToGetRidOf = ' '
 	while(user == 'n'):
 		filesToGetRidOf = input()
 		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
