@@ -1,9 +1,16 @@
-import tkinter as tk
-from tkinter import filedialog
-
 import sqlite3
+import os 
 
-connection = sqlite3.connect('memeBase.db')
+connection = sqlite3.connect("memebase.db")
+cursor = connection.cursor()
+sql_command = """
+CREATE TABLE memeber ( 
+memeber_number INTEGER PRIMARY KEY, 
+account VARCHAR(32) , 
+password VARCHAR(128));"""
+
+ 
+
 
 def newMemeber():
 	print('Welcome to the National Meme Bank of the United States, would you like to join? Y/N')
@@ -30,11 +37,14 @@ def newMemeber():
 				password = input()
 				break
 		print('Your account is fully set up!')
-		return account + ' ' + password
+		format_str = """INSERT INTO memeber( memeber_number , account , password) 
+		VALUES (NULL , {"account"} , {"password"});"""
+		sql_command = format_str.format(account = account, password = password)
+		cursor.execute(sql_command)
 	else:
 		return 'Thanks for your time!'
 def deposit():
-	print('How many memes would you like to deposit today?')
+	print('How many memes would you like to deposit today
 	user = input()
 	print('Ok, sounds good. Please choose the meme files name you would like to store.')
 	filesToStore = input()
@@ -51,4 +61,3 @@ def withdrawal():
 		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
 		user = input()
 	print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
-print(withdrawal())
