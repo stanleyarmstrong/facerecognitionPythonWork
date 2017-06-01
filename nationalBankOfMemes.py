@@ -38,7 +38,7 @@ def newMemeber():
 				break
 		print('Your account is fully set up!')
 		format_str = """INSERT INTO memeber( memeber_number , account , password) 
-		VALUES (NULL , {"account"} , {"password"});"""
+		VALUES (NULL , "{account}" , "{password}");"""
 		sql_command = format_str.format(account = account, password = password)
 		cursor.execute(sql_command)
 	else:
@@ -61,3 +61,6 @@ def withdrawal():
 		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
 		user = input()
 	print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
+newMemeber()
+	
+	
