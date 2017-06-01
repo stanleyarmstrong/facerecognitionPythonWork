@@ -1,13 +1,16 @@
 import sqlite3
-import os 
+import os.path
+
 
 connection = sqlite3.connect("memebase.db")
 cursor = connection.cursor()
 sql_command = """
-CREATE TABLE memeber( 
+CREATE TABLE member( 
 memeber_number INTEGER PRIMARY KEY, 
 account VARCHAR(32) , 
 password VARCHAR(128));"""
+BASE_DIR = os.path.dirname(os.path.abs(_file_))
+db_path =  os.path.join(BASE_DIR , "memebase.db")
 
  
 
@@ -37,7 +40,7 @@ def newMemeber():
 				password = input()
 				break
 		print('Your account is fully set up!')
-		format_str = """INSERT INTO memeber( memeber_number , account , password) 
+		format_str = """INSERT INTO member( memeber_number , account , password) 
 		VALUES (NULL , "{account}" , "{password}");"""
 		sql_command = format_str.format(account = account, password = password)
 		cursor.execute(sql_command)
