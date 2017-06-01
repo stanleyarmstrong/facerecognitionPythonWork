@@ -4,7 +4,7 @@ import os
 connection = sqlite3.connect("memebase.db")
 cursor = connection.cursor()
 sql_command = """
-CREATE TABLE memeber ( 
+CREATE TABLE memeber( 
 memeber_number INTEGER PRIMARY KEY, 
 account VARCHAR(32) , 
 password VARCHAR(128));"""
