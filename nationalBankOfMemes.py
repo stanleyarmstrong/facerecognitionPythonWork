@@ -30,23 +30,25 @@ def newMemeber():
 	else:
 		return 'Thanks for your time!'
 def deposit():
-	print('How many memes would you like to deposit today?')
-	user = input()
-	print('Ok, sounds good. Please choose the meme files name you would like to store.')
-	filesToStore = input()
-	print('It looks like '+ filesToStore+' are stored in the bank now. Have a good day!')
-	return filesToStore
-def withdrawal():
-	print('How many memes would you like to withdraw today?')
-	user = input()
-	print('Ok, sounds good! Please choose the meme file names you would like to store.')
-	user = 'n'
-	filesToGetRidOf = ' '
-	while(user == 'n'):
-		filesToGetRidOf = input()
-		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
+	if(signIn()):
+		print('How many memes would you like to deposit today?')
 		user = input()
-	print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
+		print('Ok, sounds good. Please choose the meme files name you would like to store.')
+		filesToStore = input()
+		print('It looks like '+ filesToStore+' are stored in the bank now. Have a good day!')
+		return filesToStore
+def withdrawal():
+	if(signIn()):
+		print('How many memes would you like to withdraw today?')
+		user = input()
+		print('Ok, sounds good! Please choose the meme file names you would like to store.')
+		user = 'n'
+		filesToGetRidOf = ' '
+		while(user == 'n'):
+			filesToGetRidOf = input()
+			print('Are you sure you want to delete '+ filesToGetRidOf + '?')
+			user = input()
+		print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
 def signIn():
 	print('Please sign in to the National Meme Bank Of the United States')
 	account = input('User: ')
@@ -59,4 +61,6 @@ def signIn():
 					return True
 	return False		
 newMemeber()
-signIn()
+newMemeber()
+deposit()
+withdrawal()
