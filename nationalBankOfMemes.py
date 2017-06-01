@@ -44,7 +44,7 @@ def newMemeber():
 	else:
 		return 'Thanks for your time!'
 def deposit():
-	print('How many memes would you like to deposit today
+	print('How many memes would you like to deposit today')
 	user = input()
 	print('Ok, sounds good. Please choose the meme files name you would like to store.')
 	filesToStore = input()
