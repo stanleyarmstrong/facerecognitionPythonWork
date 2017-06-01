@@ -1,20 +1,5 @@
-import sqlite3
-import os.path
 
-
-connection = sqlite3.connect("memebase.db")
-cursor = connection.cursor()
-sql_command = """
-CREATE TABLE member( 
-memeber_number INTEGER PRIMARY KEY, 
-account VARCHAR(32) , 
-password VARCHAR(128));"""
-BASE_DIR = os.path.dirname(os.path.abs(_file_))
-db_path =  os.path.join(BASE_DIR , "memebase.db")
-
- 
-
-
+databaseOfMemeber = {}
 def newMemeber():
 	print('Welcome to the National Meme Bank of the United States, would you like to join? Y/N')
 	user = input().lower()
@@ -40,14 +25,12 @@ def newMemeber():
 				password = input()
 				break
 		print('Your account is fully set up!')
-		format_str = """INSERT INTO member( memeber_number , account , password) 
-		VALUES (NULL , "{account}" , "{password}");"""
-		sql_command = format_str.format(account = account, password = password)
-		cursor.execute(sql_command)
+		databaseOfMemeber[account] = password
+		return account + ' ' + password
 	else:
 		return 'Thanks for your time!'
 def deposit():
-	print('How many memes would you like to deposit today')
+	print('How many memes would you like to deposit today?')
 	user = input()
 	print('Ok, sounds good. Please choose the meme files name you would like to store.')
 	filesToStore = input()
@@ -64,6 +47,16 @@ def withdrawal():
 		print('Are you sure you want to delete '+ filesToGetRidOf + '?')
 		user = input()
 	print('Now deleting ' + filesToGetRidOf + '. Have a nice day!')
+def signIn():
+	print('Please sign in to the National Meme Bank Of the United States')
+	account = input('User: ')
+	password = input('Password: ')
+	for key in databaseOfMemeber:
+		if(account == key):
+			for value in databaseOfMemeber:
+				if(account == value):
+					print('Login was a success! You may view your account now.')
+					return True
+	return False		
 newMemeber()
-	
-	
+signIn()
